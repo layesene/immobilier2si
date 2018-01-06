@@ -1,0 +1,15 @@
+{% extends 'email.txt.html.twig' %}
+{% block title %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" xmlns="http://www.w3.org/1999/html"/>
+{%endblock%}
+{% block body %}
+    <p>
+        Vous pouvez dès maintenant vous connecter <a href="{{ path("_LaLingerie_verification") }}">ici</a>
+        avec vos identifiants
+    </p>
+    <p>
+    <div>
+    </div>
+    A bientôt !
+    </p>
+{% endblock %}

@@ -10,7 +10,7 @@ parameters:
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: ['%locale%'] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -19,8 +19,11 @@ framework:
     csrf_protection: ~
     validation: { enable_annotations: true }
     #serializer: { enable_annotations: true }
+    templating:
+        engines: ['twig']
     default_locale: '%locale%'
     trusted_hosts: ~
+    trusted_proxies: ~
     session:
         # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
         handler_id: session.handler.native_file
@@ -30,8 +33,7 @@ framework:
     assets: ~
     php_errors:
         log: true
-
-# Twig Configuration
+   # Twig Configuration
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
@@ -46,6 +48,8 @@ doctrine:
         user: '%database_user%'
         password: '%database_password%'
         charset: UTF8
+        mapping_types:
+                   enum: string
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: '%kernel.project_dir%/var/data/data.sqlite'
@@ -57,7 +61,9 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
-
+easy_admin:
+    entities:
+        - AppBundle\Entity\User
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
@@ -72,6 +78,13 @@ fos_user:
     user_class: AppBundle\Entity\User
     service:                               # this lines
         mailer: fos_user.mailer.twig_swift # this lines
+    registration:
+        confirmation:
+          enabled: true
     from_email:
-        address: "immobilier2si@gmail.com"
-        sender_name: "Immobilier test"
+        address: "dakar.immobilier.2si@gmail.com"
+        sender_name: "Immobilier2si"
+       # template:   email/sender/email.html.twig
+    resetting:
+        email:
+            template:   email/password_resetting.email.html.twig
