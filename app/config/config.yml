@@ -61,9 +61,13 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
+        
 easy_admin:
     entities:
         - AppBundle\Entity\User
+        - AppBundle\Entity\Image
+        - AppBundle\Entity\Habitat
+        - AppBundle\Entity\TypeHabitat
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
@@ -88,3 +92,7 @@ fos_user:
     resetting:
         email:
             template:   email/password_resetting.email.html.twig
+
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller:    "%kernel.debug%"

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head class="col-md-12 col-sm-12 top-header" id="top">
+  <div class="header-container">
+    <div class="row">
+    <div class="panel header-logo">
+      <a href="<%= root_path %>">
+        <div class="space-logo"></div>
+      </a>
+    </div>
+    <div class="header-content">
+      <a id="nav-open-btn" class="nav-btn visible-phone" href="#nav" title="Menu">
+      </a>
+      <div class="header-menu">
+        <nav id="nav" role="navigation">
+          <a id="nav-close-btn" href="#top" title="Retour au contenu">
+          </a>
+          <div class="first-menu">
+            <ul>
+              <li class="first">
+                <a href="{{ path('admin') }}" target="_self" title="Accès propriétaire">
+                  <span class="ico-acces-pro"></span> Mon compte
+                </a>
+              </li>
+              <li>
+                <a href="#contact" title="nos contacts">Contact</a>
+              </li>
+               <li>
+                <a href="#contact" title="nos contacts">Alert-Email</a>
+              </li>
+               <li>
+                <a href="#contact" title="nos contacts">Le blog immobilier</a>
+              </li>
+              <li class="maselection">
+                <a href="#maselection" title="votre selection de bien"> Ma Selection
+                  <span id="NbBienSel" class="header-maselection-nb">0</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="div-marquee wrap">
+            <ul class="marquee" data-direction="top" data-speed="25" data-duration="2500">
+              <li>Bienvenue dans notre plateforme. Nous contacter au 775507333 / 705507333
+              </li>
+            </ul>
+          </div>
+          <div class="second-menu">
+            <ul>
+              <li>
+                <a href="#root_path">
+                 <!--<img class="img-responsive img-seneg" src="">-->
+                </a>
+              </li>
+              <li>
+                <a href="#connexion" title="Accès propriétaire">
+                  <span class="ico-acces-pro"></span> Le Réseau
+                </a>
+              </li>
+              <li>
+                <a href="#contact" title="nos contacts">Nos Services</a>
+              </li>
+               <li>
+                <a href="#contact" title="nos contacts">Deposer votre annonce</a>
+              </li>
+               <li>
+                <a href="#contact" title="nos contacts">Estimation</a>
+              </li>
+              <li class="maselection">
+                <a href="#maselection" title="votre selection de bien"> Accès Rapide
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </div>
+  </div>
+</head>
+</html>

@@ -1,76 +1,584 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-            </div>
-
-            <div id="status">
-                <p>
-                    <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
-
-                    Your application is now ready. You can start working on it at:
-                    <code>{{ base_dir }}</code>
-                </p>
-            </div>
-
-            <div id="next">
-                <h2>What's next?</h2>
-                <p>
-                    <svg id="icon-book" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-12.5 9 64 64" enable-background="new -12.5 9 64 64" xml:space="preserve">
-                        <path fill="#AAA" d="M6.8,40.8c2.4,0.8,4.5-0.7,4.9-2.5c0.2-1.2-0.3-2.1-1.3-3.2l-0.8-0.8c-0.4-0.5-0.6-1.3-0.2-1.9
-                            c0.4-0.5,0.9-0.8,1.8-0.5c1.3,0.4,1.9,1.3,2.9,2.2c-0.4,1.4-0.7,2.9-0.9,4.2l-0.2,1c-0.7,4-1.3,6.2-2.7,7.5
-                            c-0.3,0.3-0.7,0.5-1.3,0.6c-0.3,0-0.4-0.3-0.4-0.3c0-0.3,0.2-0.3,0.3-0.4c0.2-0.1,0.5-0.3,0.4-0.8c0-0.7-0.6-1.3-1.3-1.3
-                            c-0.6,0-1.4,0.6-1.4,1.7s1,1.9,2.4,1.8c0.8,0,2.5-0.3,4.2-2.5c2-2.5,2.5-5.4,2.9-7.4l0.5-2.8c0.3,0,0.5,0.1,0.8,0.1
-                            c2.4,0.1,3.7-1.3,3.7-2.3c0-0.6-0.3-1.2-0.9-1.2c-0.4,0-0.8,0.3-1,0.8c-0.1,0.6,0.8,1.1,0.1,1.5c-0.5,0.3-1.4,0.6-2.7,0.4l0.3-1.3
-                            c0.5-2.6,1-5.7,3.2-5.8c0.2,0,0.8,0,0.8,0.4c0,0.2,0,0.2-0.2,0.5c-0.2,0.3-0.3,0.4-0.2,0.7c0,0.7,0.5,1.1,1.2,1.1
-                            c0.9,0,1.2-1,1.2-1.4c0-1.2-1.2-1.8-2.6-1.8c-1.5,0.1-2.8,0.9-3.7,2.1c-1.1,1.3-1.8,2.9-2.3,4.5c-0.9-0.8-1.6-1.8-3.1-2.3
-                            c-1.1-0.7-2.3-0.5-3.4,0.3c-0.5,0.4-0.8,1-1,1.6c-0.4,1.5,0.4,2.9,0.8,3.4l0.9,1c0.2,0.2,0.6,0.8,0.4,1.5c-0.3,0.8-1.2,1.3-2.1,1
-                            c-0.4-0.2-1-0.5-0.9-0.9c0.1-0.2,0.2-0.3,0.3-0.5s0.1-0.3,0.1-0.3c0.2-0.6-0.1-1.4-0.7-1.6c-0.6-0.2-1.2,0-1.3,0.8
-                            C4.3,38.4,4.7,40,6.8,40.8z M46.1,20.9c0-4.2-3.2-7.5-7.1-7.5h-3.8C34.8,10.8,32.7,9,30.2,9L-2.3,9.1c-2.8,0.1-4.9,2.4-4.9,5.4
-                            L-7,58.6c0,4.8,8.1,13.9,11.6,14.1l34.7-0.1c3.9,0,7-3.4,7-7.6L46.1,20.9z M-0.3,36.4c0-8.6,6.5-15.6,14.5-15.6
-                            c8,0,14.5,7,14.5,15.6S22.1,52,14.2,52C6.1,52-0.3,45-0.3,36.4z M42.1,65.1c0,1.8-1.5,3.1-3.1,3.1H4.6c-0.7,0-3-1.8-4.5-4.4h30.4
-                            c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
-                    </svg>
-
-                    Read the documentation to learn
-                    <a href="https://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:3] }}/page_creation.html">
-                        How to create your first page in Symfony
+<div id="container">
+    <div class="row">
+        <div id="col-md-12 col-sm-12">
+            <u class="col-md-12 col-sm-12 unpoint">
+                <li class="animated fadeIn">
+                    <a href="{{ path('admin') }}">
+                        <div class="btn1 b1">
+                            <div class="hr-immo"></div>
+                            <label>Acheter</label>
+                        </div>
                     </a>
-                </p>
+                </li>
+                <li class="animated fadeIn">
+                    <a href="">
+                        <div class="btn2 b1">
+                            <div class="hr-immo"></div>
+                            <label>Louer</label>
+                        </div>
+                    </a>
+                </li>
+                <li class="animated fadeIn">
+                    <a href="">
+                        <div class="btn3 b1">
+                            <div class="hr-immo"></div>
+                            <label>Locations Vaccances</label>
+                        </div>
+                    </a>
+                </li>
+                <li class="animated fadeIn">
+                    <a href="<%=confier_bien_path%>">
+                        <div class="btn4 b1">
+                            <div class="hr-immo"></div>
+                            <label>Confier votre bien</label>
+                            <label class="ventes-locations">Ventes/Location</label>
+                        </div>
+                    </a>
+                </li>
+            </u>
+            <div class="col-md-8 col-sm-8 toutes-nos-offres">
+                <div>
+                    <label class="rotate">recherche</label>
+                </div>
+                <div class="col-md-12 col-sm-12 input-radio">
+                    <form>
+                        <div class="col-md-12 col-sm-12">
+                            <input type="radio" name="acheter" id="acheter" checked>
+                            <label class="acheter-radio">Acheter</label>
+                            <input type="radio" name="acheter" id="louer">
+                            <label class="louer-radio">Louer</label><br>
+                        </div>
+                        <div class="">
+                            <label>Localité</label>
+                            <input type="text" class="input-text" name="localite" id="localite">
+                            <label>Budget</label>
+                            <input type="text" class="" name="budget_min" id="budget_min">
+                            <span>f</span>
+                            <input type="text" class="" name="budget_max" id="budget_max">
+                            <span>f</span>
+                        </div>
+                    </form>
+                </div>
             </div>
-
+            <div class="col-md-3 col-sm-3 galerie">
+                Galerie ici
+            </div>
         </div>
     </div>
+
+</div>
 {% endblock %}
-
 {% block stylesheets %}
-<style>
-    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
-    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 21px; margin-bottom: 1em; }
-    p { margin: 0 0 1em 0; }
-    a { color: #0000F0; }
-    a:hover { text-decoration: none; }
-    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
-    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
-    #container { padding: 2em; }
-    #welcome, #status { margin-bottom: 2em; }
-    #welcome h1 span { display: block; font-size: 75%; }
-    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
-    #icon-book { display: none; }
+    <style>
+        .rechercher-accueil{
+            background-color: #E6E6FA;
+            max-witdh: 600px;
+        }
+        .galerie{
+            background-color: #E6E6FA;
+            max-width: 400px;
+        }
+        .menu-bar{
+            background: #146A86;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .menu-bar li{
+            display: inline-block;
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px #000;
+            letter-spacing: 1px;
+            padding: 2%;
+            padding-left: 7%;
+        }
+        .menu-bar a{
+            text-decoration: none;
+            font: 1em 'CicleGordita',sans-serif;
+            color: #96a6b5;
+        }
+        .menu-bar a:hover{
+            color: #ffffff;
+        }
+        .label-for-menu{
+            font-size: 10px;
+        }
+        .menu-bar-right{
+            margin-right: auto;
+            float: rigth;
+        }
+        .div-sessions{
+            background: #E6E6FA;
+        }
+        .btn-sessions{
+            background: #146A86;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        .login-form-panel
+        {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 400px;
+        }
 
-    @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
-        #icon-book { display: inline-block; }
-        #status a, #next a { display: block; }
+        .margin-label-paragraphe {
+            margin-top: 20px;
+        }
+        .header-immo{
+            padding: 13px 20px;
+            max-width: 2000px;
+            max-height: 200px;
+        }
 
-        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
-    }
-</style>
+        .header-immo-info{
+
+        }
+
+        .header-immo-logo{
+            background-image: url('web/assets/images/logo.gif');
+            margin-leff: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            max-width: 200px;
+            max-height: 200px;
+        }
+        .header-container {
+            width: 100%;
+        }
+        .header-menu{
+
+            float: right;
+        }
+
+        .first-menu li{
+            display: inline;
+            line-height:25px;
+            padding: 2px 30px;
+            font-family: normal;
+            text-transform: uppercase;
+            border-right: 1px solid white;
+        }
+        .first-menu li a{
+            color: #000;
+        }
+        a:link
+        {
+            text-decoration: #1E90FF;
+        }
+        .marquee li{
+            display: inline;
+        }
+        .unpoint li{
+            display: inline;
+        }
+        .marquee {
+            width: 50em;          /*largeur à ajuster */
+            line-height:2em;
+            text-transform: uppercase;
+            color: #1E90FF;
+            margin: 0 auto;
+            overflow: hidden;    /*  masque le décalage */
+            white-space: nowrap; /* force sur une même ligne */
+            -webkit-animation: marquee 20s linear infinite;
+            animation: marquee 20s linear infinite;
+        }
+        /* arrêt sur mouseover */
+        .marquee:hover{
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused
+        }
+        @-webkit-keyframes marquee{
+            0% {
+                text-indent:  22em;  /* tout à droite */
+            }
+            100% {
+                text-indent: -22em   /* tout à gauche */
+            }
+        }
+        @keyframes marquee{
+            0% {
+                text-indent: 22em   /* tout à droite */
+            }
+            100% {
+                text-indent: -22em   /* tout à gauche */
+            }
+        }
+        .second-menu{
+            margin: 20px;
+        }
+        .second-menu li{
+            display: inline;
+            line-height:25px;
+            padding: 2px 15px;
+            border-right: 1px solid white;
+            text-transform: uppercase;
+        }
+        .second-menu li a{
+            color: #000;
+        }
+        .img-senegal a{
+
+        }
+        .lang-seneg{
+            background: transparent url('assets/images/senegal.png');
+            background-repeat: no-repeat;
+            zoom: 1;
+        }
+        .img-seneg{
+            float: left;
+            width: 22px;
+        }
+
+        .header-logo{
+            margin-left: 35px;
+            float: left;
+        }
+        .space-logo{
+            background-image: url('assets/images/logo.gif');
+            background-size: 200px 150px;
+            width: 200px;
+            height: 150px;
+            margin-left: 15px;
+        }
+        .btn-offres{
+            margin-left: 35px;
+            margin-top: 30px;
+            float: left;
+        }
+        .image-acheter{
+            width:200px;
+            background: url('assets/images/acheter.jpg');
+        }
+        .top-header{
+            margin-bottom:2em;
+        }
+
+        .btn1
+        {
+            float: left;
+            background-image: url("assets/images/acheter_maison.jpg");
+            background-size: 310px 200px;
+            width : 310px;
+            height : 200px;
+            text-color: #000;
+            text-align: center;
+            margin-left: 48px;
+            margin-right: auto;
+            color:#000000;
+            font: 19px/1 'CicleGordita',sans-serif;
+            text-transform: uppercase;
+        }
+        .btn2
+        {
+            float: left;
+            background-image: url("assets/images/location.jpg");
+            background-size: 310px 200px;
+            width: 310px;
+            height: 200px;
+            text-color: #000;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color:#000000;
+            font: 19px/1 'CicleGordita',sans-serif;
+            text-transform: uppercase;
+        }
+
+        .btn3
+        {
+            float: left;
+            background-image: url("assets/images/vaccance1.png");
+            background-size: 310px 200px;
+            width : 310px;
+            height : 200px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color:#000000;
+            font: 19px/1 'CicleGordita',sans-serif;
+            text-transform: uppercase;
+        }
+
+        .btn4
+        {
+            float: left;
+            background-image: url("assets/images/bien.jpg");
+            background-size: 310px 200px;
+            width : 310px;
+            height: 200px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color:#000000;
+            font: 19px/1 'CicleGordita',sans-serif;
+            text-transform: uppercase;
+        }
+        @media screen and (max-width: 412px) {
+            .b1{
+                background-image: url("assets/images/bien.jpg");
+                width : 50%;
+                height: 50%;
+            }
+        }
+        .hr-immo{
+            border-bottom:3px solid #ffffff;
+            max-width: 100%;
+            margin: 10px;
+            margin-top:120px;
+        }
+        .ventes-locations{
+            font-size: 15px;
+            color: #808080;
+        }
+        .toutes-nos-offres{
+            width: 60%;
+            min-height: 120px;
+            background: #DCDCDC;
+            float: left;
+            margin-left: 50px;
+            margin-right: 0px;
+            margin-top: 10px;
+        }
+        .galerie{
+            width: 50%;
+            min-height: 120px;
+            background: #DCDCDC;
+            float: right;
+            margin-right: 42px;
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+        .rotate{
+            transform-origin: 55px 55px;
+            transform: rotate(270deg);
+            text-transform: uppercase;
+            color: #A9A9A9;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        .input-radio{
+            margin-left: 30px;
+        }
+        .acheter-radio{
+            margin-right: 20px;
+            text-transform: uppercase;
+        }
+        .louer-radio{
+            text-transform: uppercase;
+        }
+        .input-text{
+            text-rendering: auto;
+            letter-spacing: normal;
+            word-spacing: normal;
+            display: inline-block;
+            margin: 0em;
+            font: 13.3333px Arial;
+            margin-left: 20px;
+        }
+        input[type=text]:focus {
+            background-color: #DCDCDC;
+        }
+        .budget{
+            margin-right: 10px;
+        }
+        .footer-content{
+            width: 95%;
+            max-width: 1280px!important;
+            font-size: 11px;
+            margin: 20px auto 0;
+        }
+        .footer{
+            background-image: url('assets/images/immobilier.png');
+            background-size: 400px 400px;
+            height: 400px;
+            margin-top: 30px;
+        }
+        .hv-1{
+            width: 20%;
+            float: left;
+        }
+        .hv-2{
+            width: 20%;
+            float: right;
+        }
+        .hv-3{
+            width: 20%;
+            float: right;
+        }
+        .hv-4{
+            width: 30%;
+            float: right;
+        }
+        .hv{
+            height: 200px;
+            border-left: 3px solid #a9acae;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .hv1{
+            height: 120px;
+            border-left: 3px solid #a9acae;
+            margin-top: 120px;
+            margin-bottom: 0px;
+        }
+
+        .hv2{
+            height: 112px;
+            border-left: 3px solid #a9acae;
+            margin-top: 120px;
+            margin-bottom: 30px;
+        }
+
+        .span-annonces{
+            font: 20px 'CicleSemi',sans-serif;
+            color: #a9acae;
+        }
+        .footer-services{
+            margin-left: 5%;
+            color: #ffffff;
+            font-size: 15px;
+        }
+        .footer-info-dakar{
+            color: #ffffff;
+            font: 27px 'CicleFina',sans-serif;
+            text-shadow: 0 1px 1px #000;
+        }
+        .footer-info{
+            color: #ffffff;
+            font: 18px 'CicleFina',sans-serif;
+            text-shadow: 0 1px 1px #000;
+        }
+
+        /** css pour galerie ici*/
+
+
+        #images-box {
+            /* La largeur totale du bloc conteneur, essentiellement pour le centrage */
+            width: 80%;
+            margin: 0px auto;
+            position: relative;
+            top: 70px;
+        }
+
+        .image-lightbox img {
+            /* Chaque image hérite ses dimensions de son parent */
+            width: inherit;
+            height: inherit;
+            z-index: 3000;
+        }
+
+        .holder {
+            /* Dimension des images, vous pouvez les modifier */
+            width: 250px;
+            height: 166px;
+            /* Flottement à gauche, donc l'ensemble est aligné à droite */
+            float: left;
+            margin: 0 20px 0 0;
+        }
+
+        .image-lightbox {
+            /* Les dimensions héritent de .holder */
+            width: inherit;
+            height: inherit;
+            padding: 10px;
+            /* Ombrage des blocs */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            background: #fff;
+            border-radius: 5px;
+            /* Position absolue pour permettre de zoomer ultérieurement */
+            position: absolute;
+            top: 0;
+            font-family: Arial, sans-serif;
+            /* Transitions pour rendre l'ensemble visuellement abouti */
+            -webkit-transition: all ease-in 0.5s;
+            -moz-transition: all ease-in 0.5s;
+            -ms-transition: all ease-in 0.5s;
+            -o-transition: all ease-in 0.5s;
+        }
+
+
+        .image-lightbox span {
+            display: none;
+        }
+
+        .image-lightbox .expand {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 4000;
+            background: rgba(0,0,0,0); /* Fixe un bogue d'IE */
+            left: 0;
+        }
+
+        .image-lightbox .close {
+            position: absolute;
+            width: 20px; height: 20px;
+            right: 20px; top: 20px;
+        }
+
+        .image-lightbox .close a {
+            height: auto; width: auto;
+            padding: 5px 10px;
+            color: #fff;
+            text-decoration: none;
+            background: #22272c;
+            box-shadow: inset 0px 24px 20px -15px rgba(255, 255, 255, 0.1),
+            inset 0px 0px 10px rgba(0,0,0,0.4),
+            0px 0px 30px rgba(255,255,255,0.4);
+            border-radius: 5px;
+            font-weight: bold;
+            float: right;
+        }
+
+        .image-lightbox .close a:hover {
+            box-shadow: inset 0px -24px 20px -15px rgba(255, 255, 255, 0.01),
+            inset 0px 0px 10px rgba(0,0,0,0.4),
+            0px 0px 20px rgba(255,255,255,0.4);
+        }
+
+        div[id^=image]:target {
+            width: 450px;
+            height: 300px;
+            z-index: 5000;
+            top: 50px;
+            left: 200px;
+        }
+        div[id^=image]:target .close {
+            display: block;
+        }
+
+        div[id^=image]:target .expand {
+            display: none;
+        }
+
+        div#image-1:target, div#image-2:target, div#image-3:target { left: 200px; }
+        body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+        h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+        h1 { font-size: 36px; }
+        h2 { font-size: 21px; margin-bottom: 0.1em; }
+        p { margin: 0 0 1em 0; }
+        a { color: #0000F0; }
+        a:hover { text-decoration: none; }
+        code { background: #F5F5F5; max-width: 1800px; padding: 2px 2px; word-wrap: break-word; }
+        #wrapper { background: #FFF; margin: 1em auto; max-width: 1800px; width: 100%; }
+        #container { padding: 0.1em; }
+        #welcome, #status { margin-bottom: 0em; }
+        #welcome h1 span { display: block; font-size: 75%; }
+        #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
+        #icon-book { display: none; }
+
+        @media (min-width: 768px) {
+            #wrapper { width: 80%; margin: 2em auto; }
+            #icon-book { display: inline-block; }
+            #status a, #next a { display: block; }
+
+            @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+            @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+            .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+        }
+    </style>
 {% endblock %}
